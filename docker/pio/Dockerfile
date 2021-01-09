@@ -37,10 +37,12 @@ RUN git clone -b $PIO_TAG $PIO_GIT_URL
 
 #
 RUN mkdir -p /root/.sbt/launchers/0.13.15/ && \
+    mkdir /root/.sbt/launchers/0.13.13/ && \
     mkdir /root/.sbt/launchers/1.2.3/ && \
     mkdir /root/.sbt/launchers/1.2.8/
 
 COPY ./sbt-0.13.15-bin/ /root/.sbt/launchers/0.13.15/
+COPY ./sbt-0.13.13-bin/ /root/.sbt/launchers/0.13.13/
 COPY ./sbt-1.2.3-bin/ /root/.sbt/launchers/1.2.3/
 COPY ./sbt-1.2.8-bin/ /root/.sbt/launchers/1.2.8/
 #
